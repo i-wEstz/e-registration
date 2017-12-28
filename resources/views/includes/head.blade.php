@@ -67,6 +67,17 @@
 
 <link rel="stylesheet" href="assets/custom/css/components.css" />
 <link rel="stylesheet" href="assets/custom/css/pages.css" />
+
+<style>
+        body {
+            background-image: url("assets/custom/img/White-Background.jpg");
+        }
+        .page{
+            background: #ffffff5c;
+        }
+</style>
+
+
 <!-- End: Stylesheets -->
 
 <title>Event Registration</title>
