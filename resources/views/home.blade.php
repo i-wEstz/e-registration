@@ -15,17 +15,17 @@
             
                     <h1 class="text-center">Let's Celebrate STM 30th Anniversary</h1>
                     <div class="content-block">
-                    <div class="buttons-row row">
+                    <div class="buttons-row">
                     <span class="fa-2x fa-stack text-center" title="Pin">
-                         <!--<span class="fa fa-circle fa-stack-2x color-youtube"></span>-->
-                         <span class="fa fa-map-marker fa-stack-1x fa-inverse" style="color:red;"></span>
+                         <span class="fa fa-circle fa-stack-2x color-youtube"></span>
+                         <span class="fa fa-map-marker fa-stack-1x fa-inverse"></span>
                      </span>
-                     <h2 class="text-center">สวนนงนุช exhibition hall | 11 กุมภาพันธ์ 2561<h2>
+                     <h2>สวนนงนุช exhibition hall | 11 กุมภาพันธ์ 2561<h2>
         
                      </div>
                     </div>
                     
-                     <div class="content-block row">
+                     <div class="content-block row" style="margin:auto 0;">
                          <div class="col-100">
                             <p>
                                     <button class="button button-big button-block 
