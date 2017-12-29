@@ -67,14 +67,16 @@
 
 <link rel="stylesheet" href="assets/custom/css/components.css" />
 <link rel="stylesheet" href="assets/custom/css/pages.css" />
-
 <style>
+        @import url('https://fonts.googleapis.com/css?family=Prompt|Roboto');
         body {
-            background-image: url("assets/custom/img/White-Background.jpg");
+            background:white;
+            font-family: 'Roboto','Prompt', sans-serif;
         }
         .page{
-            background: #ffffff5c;
+            background-image: url("assets/custom/img/White-Background.jpg");
         }
+    
 </style>
 
 
