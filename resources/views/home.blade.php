@@ -33,7 +33,7 @@
               <h2 class="text-center">11 กุมภาพันธ์ 2561</h2>
               </div>
               
-               <div class="content-block row" style="margin:auto 0;">
+               <div class="content-block" style="margin:auto 0;">
                    <div class="col-100">
                       
                               <a href="{{ route('register') }}" class="button button-big button-block 
