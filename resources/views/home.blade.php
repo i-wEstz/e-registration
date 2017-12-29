@@ -39,7 +39,7 @@
                               <a href="{{ route('register') }}" class="button button-big button-block 
                               button-fill button-raised button-round button-linkedin text-center" 
                             role="button" style="height: 6em;" >
-                            <span style="font-size: x-large;line-height: 3.5em;"><i class="fa fa-angle-double-right" style="padding-right: 10px;">
+                            <span style="font-size: xx-large;line-height: 2.5em;"><i class="fa fa-angle-double-right" style="padding-right: 10px;">
                                 </i>Register</span></a>
                       
                   </div>
