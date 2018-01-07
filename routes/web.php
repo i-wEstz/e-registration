@@ -26,3 +26,11 @@ Route::get('home',function () {
 Route::get('register',function () {
     return view('register');
 })->name('register');
+
+Route::get('menu',function () {
+    return view('menu');
+})->name('menu');
+
+Route::get('geocomplete',function () {
+    return view('geocomplete');
+})->name('geocomplete');

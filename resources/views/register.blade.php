@@ -65,12 +65,63 @@
 				</ul>
       </div>
       <div class="content-block text-center" style="margin-top:1em;margin-bottom:1em;">
-          <i class="material-icons" style="font-size:5em;">face</i>
-          <p>ชื่อ-นามสกุล/Name-Surname</p>
+          <!--<i class="material-icons" style="font-size:5em;">face</i>-->
+          <p style="margin:0px"><i class="material-icons">face</i> ชื่อ-นามสกุล/Name-Surname</p>
           <h1 style="margin:0px">สมชาย ทำดี</h1>
       </div>
+      <div class="content-block-title"><b>จำนวนผู้ติดตาม</b></div>
+      <div class="list-block" style="background:whitesmoke;">
+          <ul>
+            <li>
+              <label class="label-radio item-content">
+                <input type="radio" name="radio" value="books">
+                <span class="item-media">
+                  <i class="icon icon-form-radio"></i>
+                </span>
+                <span class="item-inner">
+                  <span class="item-title">0</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="label-radio item-content">
+                <input type="radio" name="radio" value="food">
+                <span class="item-media">
+                  <i class="icon icon-form-radio"></i>
+                </span>
+                <span class="item-inner">
+                  <span class="item-title">1</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="label-radio item-content">
+                <input type="radio" name="radio" value="games" checked="">
+                <span class="item-media">
+                  <i class="icon icon-form-radio"></i>
+                </span>
+                <span class="item-inner">
+                  <span class="item-title">2</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="label-radio item-content">
+                <input type="radio" name="radio" value="movies">
+                <span class="item-media">
+                  <i class="icon icon-form-radio"></i>
+                </span>
+                <span class="item-inner">
+                  <span class="item-title">3</span>
+                </span>
+              </label>
+            </li>
+          </ul>
+        </div>
 			<div class="content-block" style="margin-top:1em;margin-bottom:1em;">
-				<button type="submit" class="button button-big button-block button-fill" style="font-size:2em;">บันทึกการลงทะเบียน</button>
+        <button 
+        href="{{ route('menu') }}"
+        type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">บันทึกการลงทะเบียน</button>
 			</div>
 		</form>
 
