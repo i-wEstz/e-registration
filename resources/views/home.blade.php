@@ -16,7 +16,7 @@
             <!-- Scrollable page content -->
             <div class="page-content">
                 <div class="content-block">
-                    <img class="logo" src="assets/custom/img/logo.svg" alt="logo" />
+                    <img class="logo" src="assets/custom/img/smt2_e.png" alt="logo" />
                 </div>
               <h1 class="text-center">Let's Celebrate STM 30th Anniversary</h1>
               <div class="content-block" style="margin:0;">
