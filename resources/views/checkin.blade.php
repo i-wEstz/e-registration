@@ -1,5 +1,4 @@
-    
-       
+
        <div class="pages">
         <div data-page="login" class="page no-navbar">
                 <!-- Begin: Page Content -->
@@ -12,7 +11,7 @@
           <div class="card-content-inner text-center">
             <p>Your Event on <b>11 Feb 2018</b></p>
             <i class="material-icons" style="font-size:5em;">access_alarm</i>
-            <h1 style="margin:0px" id="countdown"></h1>
+            <h1 style="margin:0px">35</h1>
             <p style="margin:0px">DAYS LEFT</p>
           </div>
         </div>
@@ -124,7 +123,8 @@
         href="{{ route('menu') }}"
         type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">บันทึกการลงทะเบียน</button>
 			</div>
-		</form>      
+		</form>
+
 	</div>
 	<!-- End: Page Content -->
             </div>

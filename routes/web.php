@@ -34,3 +34,7 @@ Route::get('menu',function () {
 Route::get('geocomplete',function () {
     return view('geocomplete');
 })->name('geocomplete');
+
+Route::get('checkin',function () {
+    return view('checkin');
+})->name('checkin');
