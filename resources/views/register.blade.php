@@ -34,10 +34,13 @@
     </div>
   </div>
 
-		<form name="login" action="#" method="POST" enctype="multipart/form-data">
+		<form name="login" id="login" action="#" method="POST" enctype="multipart/form-data">
 			<div class="list-block no-hairlines" style="margin:0px;">
 				<ul>
 					<li>
+            <div class="text-center">
+            <h1>กรุณาใส่รหัสพนักงาน</h1>
+            </div> 
 						<div class="item-content" style="background:whitesmoke;">
 							<div class="item-media">
 								<i class="material-icons">loyalty</i>
@@ -65,17 +68,17 @@
 					</li>
 				</ul>
       </div>
-      <div class="content-block text-center" style="margin-top:1em;margin-bottom:1em;">
+      <!--<div class="content-block text-center" style="margin-top:1em;margin-bottom:1em;">-->
           <!--<i class="material-icons" style="font-size:5em;">face</i>-->
-          <p style="margin:0px"><i class="material-icons">face</i> ชื่อ-นามสกุล/Name-Surname</p>
+          <!--<p style="margin:0px"><i class="material-icons">face</i> ชื่อ-นามสกุล/Name-Surname</p>
           <h1 style="margin:0px">สมชาย ทำดี</h1>
-      </div>
+      </div>-->
       <div class="content-block-title"><b>จำนวนผู้ติดตาม</b></div>
       <div class="list-block" style="background:whitesmoke;">
           <ul>
             <li>
               <label class="label-radio item-content">
-                <input type="radio" name="radio" value="books">
+                <input type="radio" name="radio" value="0" checked="">
                 <span class="item-media">
                   <i class="icon icon-form-radio"></i>
                 </span>
@@ -86,7 +89,7 @@
             </li>
             <li>
               <label class="label-radio item-content">
-                <input type="radio" name="radio" value="food">
+                <input type="radio" name="radio" value="1">
                 <span class="item-media">
                   <i class="icon icon-form-radio"></i>
                 </span>
@@ -97,7 +100,7 @@
             </li>
             <li>
               <label class="label-radio item-content">
-                <input type="radio" name="radio" value="games" checked="">
+                <input type="radio" name="radio" value="2">
                 <span class="item-media">
                   <i class="icon icon-form-radio"></i>
                 </span>
@@ -108,7 +111,7 @@
             </li>
             <li>
               <label class="label-radio item-content">
-                <input type="radio" name="radio" value="movies">
+                <input type="radio" name="radio" value="3">
                 <span class="item-media">
                   <i class="icon icon-form-radio"></i>
                 </span>
@@ -121,7 +124,6 @@
         </div>
 			<div class="content-block" style="margin-top:1em;margin-bottom:1em;">
         <button 
-        href="{{ route('menu') }}"
         type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">บันทึกการลงทะเบียน</button>
 			</div>
 		</form>      

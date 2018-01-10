@@ -720,17 +720,19 @@ myApp.onPageInit('home', function(page) {
 | Log In
 |------------------------------------------------------------------------------
 */
-
 myApp.onPageInit('login', function(page) {
+
 		/*Count Down*/
-		var countDownDate = new Date("Feb 11, 2018 00:00:00").getTime();
-		// Get todays date and time
-		var now = new Date().getTime();	
-		// Find the distance between now an the count down date
-		var distance = countDownDate - now;	
-		// Time calculations for days, hours, minutes and seconds
-		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		document.getElementById("countdown").innerHTML = days
+	var countDownDate = new Date("Feb 11, 2018 00:00:00").getTime();
+	// Get todays date and time
+	var now = new Date().getTime();	
+	// Find the distance between now an the count down date
+	var distance = countDownDate - now;	
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	if(document.getElementById("countdown")){
+	document.getElementById("countdown").innerHTML = days;
+	}
 	/* Show|Hide Password */
 	$$('.page[data-page=login] [data-action=show-hide-password]').on('click', function() {
 		if ($$('.page[data-page=login] input[data-toggle=show-hide-password]').attr('type') === 'password') {
@@ -766,11 +768,14 @@ myApp.onPageInit('login', function(page) {
       }
 		},
 		onkeyup: false,
+		debug: true,
     errorElement : 'div',
 		errorPlacement: function(error, element) {
 			error.appendTo(element.parent().siblings('.input-error'));
 		},
 		submitHandler: function(form) {
+			var queryString = $('#login').serialize(); 
+			console.log(queryString);
 			myApp.addNotification({
         message: 'Welcome',
 				hold: 1500,
@@ -779,7 +784,7 @@ myApp.onPageInit('login', function(page) {
 				}
 			});
 			mainView.router.load({
-				url: 'home.html'
+				url: 'menu'
 			});
 		}
 	});
