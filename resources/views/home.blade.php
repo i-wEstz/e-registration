@@ -29,7 +29,7 @@
   
                </div>-->
                <img class="logo" src="assets/custom/img/icon_placesapi.svg" alt="Pin"  style="height:5em;"/>
-               <h1 class="text-center" style="border-bottom: solid;border-width: 2px;">สวนนงนุช Exhibition Hall</h1>
+               <h1 class="text-center" style="border-bottom: solid;border-width: 2px;">สวนนงนุช Exhibition Centre</h1>
               <h2 class="text-center">11 กุมภาพันธ์ 2561</h2>
               </div>
               
