@@ -19,7 +19,7 @@
               <div class="navbar-inner">
                 <div class="title" style="padding-left:10px">STM 30th Anniversary</div>
                 <div class="right">
-                    <a href="#" data-panel="right" class="link open-panel">
+                    <a href="{{ route('home') }}" data-panel="right" class="link open-panel">
                       <i class="material-icons">home</i>
                     </a>
                   </div>
@@ -50,7 +50,7 @@
                         <div class="card-content-inner text-center">
                           <p>Your Event on <b>11 Feb 2018</b></p>
                           <i class="material-icons" style="font-size:5em;">access_alarm</i>
-                          <h1 style="margin:0px">0</h1>
+                          <h1 style="margin:0px" id="countdown"></h1>
                           <p style="margin:0px">DAYS LEFT</p>
                         </div>
                       </div>

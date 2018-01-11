@@ -1,7 +1,21 @@
     
        
        <div class="pages">
-        <div data-page="login" class="page no-navbar">
+        <div data-page="login" class="page">
+
+			<!-- Begin: Navbar -->
+			<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="#" class="link icon-only back">
+								<i class="icon icon-back"></i>
+							</a>
+						</div>
+						<div class="center">เช็คอิน / Check In</div>
+					</div>
+				</div>
+				<!-- End: Navbar -->
+
                 <!-- Begin: Page Content -->
   <div class="page-content">
 		<div class="content-block">
@@ -39,18 +53,25 @@
 				<ul>
 					<li>
             <div class="text-center">
-            <h1>กรุณาใส่รหัสพนักงาน</h1>
+            <h1>กรุณาใส่รหัสพนักงาน/Put your employee number here</h1>
             </div> 
 						<div class="item-content" style="background:whitesmoke;">
 							<div class="item-media">
-								<i class="material-icons">loyalty</i>
+								<i class="material-icons" style="font-size:2.5em;line-height:1.2;">loyalty</i>
 							</div>
 							<div class="item-inner">
+								<div class="item-title floating-label">รหัสพนักงาน/Employee ID</div>
 								<div class="item-input">
 									<input type="text" name="id" placeholder="รหัสพนักงาน/Employee ID" required />
 								</div>
 								<div class="item-text input-error"></div>
 							</div>
+							<!--<div class="item-inner">
+								<div class="item-input">
+									<input type="text" name="id" placeholder="รหัสพนักงาน/Employee ID" required />
+								</div>
+								<div class="item-text input-error"></div>
+							</div>-->
 						</div>
 					</li>
 					<li>
@@ -73,58 +94,32 @@
           <!--<p style="margin:0px"><i class="material-icons">face</i> ชื่อ-นามสกุล/Name-Surname</p>
           <h1 style="margin:0px">สมชาย ทำดี</h1>
       </div>-->
-      <div class="content-block-title"><b>จำนวนผู้ติดตาม</b></div>
+     <!-- <div class="content-block-title"><b>จำนวนผู้ติดตาม/Number of Attendees</b></div> -->
       <div class="list-block" style="background:whitesmoke;">
-          <ul>
-            <li>
-              <label class="label-radio item-content">
-                <input type="radio" name="radio" value="0" checked="">
-                <span class="item-media">
-                  <i class="icon icon-form-radio"></i>
-                </span>
-                <span class="item-inner">
-                  <span class="item-title">0</span>
-                </span>
-              </label>
-            </li>
-            <li>
-              <label class="label-radio item-content">
-                <input type="radio" name="radio" value="1">
-                <span class="item-media">
-                  <i class="icon icon-form-radio"></i>
-                </span>
-                <span class="item-inner">
-                  <span class="item-title">1</span>
-                </span>
-              </label>
-            </li>
-            <li>
-              <label class="label-radio item-content">
-                <input type="radio" name="radio" value="2">
-                <span class="item-media">
-                  <i class="icon icon-form-radio"></i>
-                </span>
-                <span class="item-inner">
-                  <span class="item-title">2</span>
-                </span>
-              </label>
-            </li>
-            <li>
-              <label class="label-radio item-content">
-                <input type="radio" name="radio" value="3">
-                <span class="item-media">
-                  <i class="icon icon-form-radio"></i>
-                </span>
-                <span class="item-inner">
-                  <span class="item-title">3</span>
-                </span>
-              </label>
-            </li>
-          </ul>
+		<ul>
+			<li>
+				<a href="#" class="item-link smart-select" data-open-in="popup" data-searchbar="true">
+					<select name="attendees">
+						<option value="0" selected>0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select>
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title">จำนวนผู้ติดตาม/Number of Attendees</div>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
         </div>
 			<div class="content-block" style="margin-top:1em;margin-bottom:1em;">
         <button 
-        type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">บันทึกการลงทะเบียน</button>
+        type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">เช็คอิน/Check In</button>
 			</div>
 		</form>      
 	</div>
