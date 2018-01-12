@@ -39,6 +39,7 @@
                                   <i class="material-icons" style="font-size:5em;">beenhere</i>
                                   <p><span data-progress="75" class="progressbar color-green"><span style="transform: translate3d(-25%, 0px, 0px);"></span></span></p>
                                   <h1 style="margin:0px">2436</h1>
+
                                   <p style="margin:0px">ATTENDEES CHECKED IN</p>
                                 </div>
                               </div>
@@ -63,8 +64,14 @@
                           <div class="card-content-inner text-center">
                               <p>We are here <b>JOIN US!</b></p>
                               <i class="material-icons" style="font-size:5em;">accessibility</i>
-                              <h1 style="margin:0px">2658</h1>
+                              <h1 style="margin:0px">{!! $result["registered"] !!}</h1>
                               <p style="margin:0px">ATTENDEES</p>
+
+                              <h1 style="margin:0px">{!! $result["follower"] !!}</h1>
+                              <p style="margin:0px">FOLLOWER</p>
+
+                              <h1 style="margin:0px">{!! $result["summary"] !!}</h1>
+                              <p style="margin:0px">SUMMARY</p>
                           </div>
                         </div>
                       </div>
