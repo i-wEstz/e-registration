@@ -43,7 +43,7 @@
               <div class="navbar-inner">
                 <div class="title" style="padding-left:10px">STM 30th Anniversary</div>
                 <div class="right">
-                    <a href="{{ route('home') }}" class="link external" data-panel="right" class="link open-panel">
+                    <a href="{{ route('home') }}" data-panel="right" class="link open-panel">
                       <i class="material-icons">home</i>
                     </a>
                   </div>
