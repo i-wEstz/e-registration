@@ -2,8 +2,32 @@
 <html lang="en">
 <head>
   @include('includes.head')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 <body>
+    <script>
+        function CallChart(){
+          var ctx = document.getElementById('myChart').getContext('2d');
+          // For a pie chart
+          var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                  datasets: [{
+                      data: [{!! $result["registered"] !!}, {!! $result["follower"] !!}],
+                      backgroundColor: [
+                          'green', '#2196f3'
+                      ]
+                  }],
+                  // These labels appear in the legend and in the tooltips when hovering different arcs
+                  labels: [
+                      'Attendees',
+                      'Followers'
+                  ]
+              },
+              options: {},
+          });
+        }
+      </script> 
     <!-- Views -->
     <div class="views">
       <!-- Your main view, should have "view-main" class -->
@@ -19,7 +43,7 @@
               <div class="navbar-inner">
                 <div class="title" style="padding-left:10px">STM 30th Anniversary</div>
                 <div class="right">
-                    <a href="{{ route('home') }}" data-panel="right" class="link open-panel">
+                    <a href="{{ route('home') }}" class="link external" data-panel="right" class="link open-panel">
                       <i class="material-icons">home</i>
                     </a>
                   </div>
@@ -61,17 +85,17 @@
                       <div class="card">
                         <div class="card-header"><b>Total Attendees</b></div>
                         <div class="card-content">
-                          <div class="card-content-inner text-center">
-                              <p>We are here <b>JOIN US!</b></p>
-                              <i class="material-icons" style="font-size:5em;">accessibility</i>
+                          <div class="card-content-inner text-center" onload="CallChart()">
+                              <canvas id="myChart"></canvas>
+                              <!--<i class="material-icons" style="font-size:5em;">accessibility</i>
                               <h1 style="margin:0px">{!! $result["registered"] !!}</h1>
                               <p style="margin:0px">ATTENDEES</p>
 
                               <h1 style="margin:0px">{!! $result["follower"] !!}</h1>
-                              <p style="margin:0px">FOLLOWER</p>
+                              <p style="margin:0px">FOLLOWER</p>-->
 
                               <h1 style="margin:0px">{!! $result["summary"] !!}</h1>
-                              <p style="margin:0px">SUMMARY</p>
+                              <p style="margin:0px">TOTALS</p>
                           </div>
                         </div>
                       </div>
@@ -82,6 +106,7 @@
                   <div class="row">
                     <div class="title"><h1><i class="material-icons">subject</i>MENU</h1></div>
                   <div class="col-100">
+                      <a href="{{ route('agenda') }}">
                       <div class="card" id="agenda">
                           <div class="card-content" style="color:#2196f3;">
                             <div class="card-content-inner text-center">
@@ -90,10 +115,11 @@
                             </div>
                           </div>
                         </div>
+                      </a>
                   </div> 
                   <div class="col-100">
                       <div class="card">
-                          <div class="card-content" style="color:#2196f3;">
+                          <div class="card-content" style="color:#353535;background: lightgrey;">
                             <div class="card-content-inner text-center">
                               <i class="material-icons" style="font-size:5em;">card_giftcard</i>
                               <h3 style="margin:0px">ของรางวัล/Reward</h3>
@@ -140,10 +166,13 @@
         </div>
       </div>
     </div>
- 
      @include('includes.script')
+     <script>
+        $( document ).ready(function() {
+          CallChart();
+      });
+     </script>
 </body>
 <footer>
-    
 </footer>   
 </html>

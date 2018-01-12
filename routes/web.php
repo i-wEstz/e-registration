@@ -51,7 +51,7 @@ Route::get('checkin',function () {
     })->name('checkin');
 
 
-
+Route::get('9DE4A97425678C5B1288AA70C1669A64',"MainController@getRegisterPage")->name('register');
 Route::get('attendee',"MainController@getAttendees");
 
 Route::get('employees',"MainController@getEmployees");
