@@ -10,71 +10,13 @@ class MainController extends Controller
     //
 
 
-
-    public function getRegisterPage(){
-
-
-    $result = $this->getAttendees();
-
-    return view('register',["result"=>$result]);
-}
-
-    public function getMenuPage(){
+    public function getRegisterPage()
+    {
 
 
         $result = $this->getAttendees();
 
-        return view('menu',["result"=>$result]);
-    }
-
-
-
-    public function getEmployee($empno)
-    {
-
-        $result = DB::table("Employees")->select("*")->where("empno",$empno)->get();
-
-
-
-        if ($result->count() == 0){
-
-            return 0;
-
-        }
-
-        return $result;
-
-    }
-    public function getEmployeeStatus($empno){
-
-        return DB::table("Employees")->select("*")->where("empno",$empno)->get();
-
-    }
-    public function getEmployeeRegister($empno){
-
-
-
-        return DB::table("Employees")->count();
-
-    }
-    public function registerEmployee($empno){
-
-
-        DB::table('Employees')
-            ->where('empno', $empno)
-            ->update(['registedstatus' => 1]);
-
-        return 1;
-
-
-    }
-
-    public function getEmployees()
-    {
-
-
-        return DB::table("Employees")->select("*")->get();
-
+        return view('register', ["result" => $result]);
     }
 
     public function getAttendees()
@@ -88,11 +30,107 @@ class MainController extends Controller
 
             "registered" => $registered,
             "follower" => $follower,
-            "summary"=> $registered + $follower
+            "summary" => $registered + $follower
 
         );
 
 
         return $result;
+    }
+
+    public function getMenuPage()
+    {
+
+
+        $result = $this->getAttendees();
+
+        return view('menu', ["result" => $result]);
+    }
+
+    public function getEmployee($empno)
+    {
+
+        $result = DB::table("Employees")->select("*")->where([['empno', $empno],["registedstatus",1]])->get();
+
+
+        if ($result->count() == 0) {
+
+            return -1;
+
+        }
+
+        return $result;
+
+    }
+
+    public function getEmployeeStatus($empno)
+    {
+
+        return DB::table("Employees")->select("*")->where("empno", $empno)->get();
+
+    }
+
+    public function getEmployeeRegister($empno)
+    {
+
+
+        return DB::table("Employees")->count();
+
+    }
+
+
+
+    public function registerEmployee($empno)
+    {
+
+
+        $count =  DB::table('Employees')
+            ->where([['empno', $empno],["registedstatus",1]])->count();
+
+
+
+        $follower = 2;
+
+        if ($count == 1){
+
+
+            $checkDup = DB::table('CheckIn')
+                ->where('empno', $empno)->count();
+
+
+            if($checkDup == 0) {
+
+                DB::table('CheckIn')
+                    ->insert([
+
+                        "timestamp" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')."+7 hours")),
+                        "empno" => $empno,
+                        "follower" => $follower
+
+                    ]);
+
+
+            } else {
+
+                $count = -1;
+            }
+        }
+
+        if ($count == 0) $count = -1;
+//        DB::table('Employees')
+//            ->where('empno', $empno)
+//            ->update(['registedstatus' => 1]);
+
+        return $count;
+
+
+    }
+
+    public function getEmployees()
+    {
+
+
+        return DB::table("Employees")->select("*")->get();
+
     }
 }

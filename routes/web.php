@@ -31,6 +31,9 @@ Route::get('home',function () {
 //
 Route::get('register',"MainController@getRegisterPage")->name('register');
 
+
+Route::get('9DE4A97425678C5B1288AA70C1669A64',"MainController@getRegisterPage")->name('register');
+
 //Route::get('menu',function () {
 //    return view('menu');
 //})->name('menu');
@@ -82,7 +85,10 @@ Route::get('setDB',function(){
 
 Route::get('test',function(){
 
-   return ('MainController@getAttendees');
+   return "
+<script>window.location.href = 'line://nv/addFriends'; </script>
+
+<a href='line://nv/addFriends'>test</a>";
 });
 
 
