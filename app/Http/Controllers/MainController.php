@@ -12,7 +12,17 @@ class MainController extends Controller
 
     public function getEmployee($empno){
 
-        return DB::table("Employees")->select("*")->where("empno",$empno)->get();
+        $result = DB::table("Employees")->select("*")->where("empno",$empno)->get();
+
+
+
+        if ($result->count() == 0){
+
+            return 0;
+
+        }
+
+        return $result;
 
     }
     public function getEmployeeStatus($empno){
@@ -20,9 +30,11 @@ class MainController extends Controller
         return DB::table("Employees")->select("*")->where("empno",$empno)->get();
 
     }
-    public function getEmployeeRegisted($empno){
+    public function getEmployeeRegister($empno){
 
-        return DB::table("Employees")->select("*")->where("empno",$empno)->get();
+
+
+        return DB::table("Employees")->count();
 
     }
     public function registerEmployee($empno){
