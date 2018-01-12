@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   @include('includes.head')
+  <style>
+	  .list-block{
+		  margin: 64px 0;
+	  }
+  </style>	  
 </head>
 <body>
     <!-- Views -->
@@ -15,11 +20,11 @@
 			<!-- Begin: Navbar -->
 			<div class="navbar">
 					<div class="navbar-inner">
-						<div class="left">
+						<!--<div class="left">
 							<a href="#" class="link icon-only back">
 								<i class="icon icon-back"></i>
 							</a>
-						</div>
+						</div>-->
 						<div class="center">เช็คอิน / Check In</div>
 					</div>
 				</div>
@@ -32,14 +37,16 @@
       <div class="row">
 		</div>
   </div>
-
+ 
 		<form name="login" id="login" action="#" method="POST" enctype="multipart/form-data">
 			<div class="list-block no-hairlines" style="margin:0px;">
 				<ul>
 					<li>
+							<div class="content-block">			
             <div class="text-center">
             <h1>กรุณาใส่รหัสพนักงาน<br>Fill your employee number here</h1>
-            </div> 
+			</div> 
+		</div>
 						<div class="item-content" style="background:whitesmoke;">
 							<div class="item-media">
 								<i class="material-icons" style="font-size:2.5em;line-height:1.2;">loyalty</i>
@@ -73,18 +80,19 @@
 						</div> -->
 					</li>
 				</ul>
-      </div>
+	  </div>
+
       <!--<div class="content-block text-center" style="margin-top:1em;margin-bottom:1em;">-->
           <!--<i class="material-icons" style="font-size:5em;">face</i>-->
           <!--<p style="margin:0px"><i class="material-icons">face</i> ชื่อ-นามสกุล/Name-Surname</p>
           <h1 style="margin:0px">สมชาย ทำดี</h1>
       </div>-->
      <!-- <div class="content-block-title"><b>จำนวนผู้ติดตาม/Number of Attendees</b></div> -->
-      <div class="list-block" style="background:whitesmoke;">
+      <div class="list-block" style="background:whitesmoke;margin:32px 0;">
 		<ul>
 			<!-- Open In Sheet -->
 			<li>
-				<a href="#" class="item-link smart-select" data-open-in="popover" data-searchbar="false"
+				<a href="#" class="item-link smart-select smart-select-init" data-open-in="popover" data-searchbar="false"
 				data-back-on-select="true">
 					<select name="attendees">
 						<option value="0" selected>0</option>
@@ -109,7 +117,8 @@
         <button 
         type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">เช็คอิน/Check In</button>
 			</div>
-		</form>      
+		</form>  
+	   
 	</div>
 	<!-- End: Page Content -->
             </div>
