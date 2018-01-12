@@ -76,6 +76,9 @@
         .page{
             background-image: url("assets/custom/img/White-Background.jpg");
         }
+        .smart-select-page{
+            background:white;
+        }   
     
 </style>
 

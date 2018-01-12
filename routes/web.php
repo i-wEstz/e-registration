@@ -35,6 +35,10 @@ Route::get('geocomplete',function () {
     return view('geocomplete');
 })->name('geocomplete');
 
+Route::get('checkin',function () {
+    return view('checkin');
+})->name('checkin');
+
 
 Route::get('employees/{empid}',"MainController@getEmployee");
 Route::post('employees/{empid}/register',"MainController@registerEmployee");
