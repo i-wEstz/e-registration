@@ -135,6 +135,9 @@ myApp.onPageInit('login', function(page) {
     $$('#checkin').on('click', function() {
         window.location.href = 'line://nv/addFriends';
     });
+    $$('#checkin_home').on('click', function() {
+        window.location.href = 'line://nv/addFriends';
+    });
     /* Validate & Submit Form */
     $('.page[data-page=login] form[name=login]').validate({
         rules: {
