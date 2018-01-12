@@ -779,11 +779,17 @@ myApp.onPageInit('login', function(page) {
 			var id = json[0]['value'];
 			var url = "/employees/"+id;
 			$.getJSON( url, function( json ) {
-				if(json = "-1"){
+				json = JSON.stringify(json);
+				if(json == "-1"){
 					myApp.alert('ไม่พบข้อมูลพนักงาน / Employee not found.');
 				}
 				else{
-				console.log( "JSON Data: " + json );
+				var data = JSON.parse(json);
+				var name = data[0]['prefix_th']+data[0]['firstname_th']+data[0]['lastname_th'];
+				var name_eng = data[0]['prefix_en']+data[0]['firstname_en']+data[0]['lastname_en'];	
+				myApp.confirm('Welcome'+name, 'Confirm', function() {
+					myApp.alert('You clicked OK button.');
+				});
 				}
 			   });
 			myApp.addNotification({
