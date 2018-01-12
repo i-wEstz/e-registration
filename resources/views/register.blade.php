@@ -39,8 +39,11 @@
             <div class="card-content-inner text-center">
                 <p>We are here <b>JOIN US!</b></p>
                 <i class="material-icons" style="font-size:5em;">accessibility</i>
-                <h1 style="margin:0px">2658</h1>
+                <h1 style="margin:0px">{!! $result["registered"] !!}</h1>
                 <p style="margin:0px">ATTENDEES</p>
+
+
+				{{--{!! $result["registered"] . $result["follower"] . $result["summary"] !!}--}}
             </div>
           </div>
         </div>
