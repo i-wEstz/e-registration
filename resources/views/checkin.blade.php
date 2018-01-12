@@ -1,9 +1,5 @@
 
        <div class="pages">
-
-
-
-
         <div data-page="login" class="page no-navbar">
                 <!-- Begin: Page Content -->
   <div class="page-content">
@@ -28,10 +24,8 @@
             <div class="card-content-inner text-center">
                 <p>We are here <b>JOIN US!</b></p>
                 <i class="material-icons" style="font-size:5em;">accessibility</i>
-                <h1 style="margin:0px">2658a</h1>
+                <h1 style="margin:0px">2658</h1>
                 <p style="margin:0px">ATTENDEES</p>
-
-
             </div>
           </div>
         </div>
