@@ -31,6 +31,7 @@
                <img class="logo" src="assets/custom/img/icon_placesapi.svg" alt="Pin"  style="height:5em;"/>
                <h1 class="text-center" style="border-bottom: solid;border-width: 2px;">สวนนงนุช พัทยา <br>@ International Convention and Exhibition Center</h1>
               <h2 class="text-center">11 กุมภาพันธ์ 2561</h2>
+              <h2 class="text-center">11 February 2561</h2>
               </div>
               
                <div class="content-block" style="margin:auto 0;">

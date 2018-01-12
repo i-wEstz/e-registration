@@ -82,7 +82,7 @@
                   <div class="row">
                     <div class="title"><h1><i class="material-icons">subject</i>MENU</h1></div>
                   <div class="col-100">
-                      <div class="card">
+                      <div class="card" id="agenda">
                           <div class="card-content" style="color:#2196f3;">
                             <div class="card-content-inner text-center">
                               <i class="material-icons" style="font-size:5em;">today</i>
@@ -112,7 +112,8 @@
                           </div>
                       </div> 
                       <div class="col-100">
-                          <div class="card">
+                        <a href="#">
+                          <div class="card" id="checkin">
                               <div class="card-content" style="color:#2196f3;">
                                 <div class="card-content-inner text-center">
                                   <i class="material-icons" style="font-size:5em;">camera_enhance</i>
@@ -120,6 +121,7 @@
                                 </div>
                               </div>
                             </div>
+                          </a>
                         </div>   
                         <div class="col-100">
                             <div class="card">

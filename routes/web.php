@@ -23,7 +23,11 @@ Route::get('index',function () {
 
 Route::get('home',function () {
     return view('home');
-})->name('home');;
+})->name('home');
+
+Route::get('agenda',function () {
+    return view('agenda');
+})->name('agenda');
 
 //Route::get('register',function () {
 //    return view('register');
