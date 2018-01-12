@@ -45,7 +45,7 @@
                               </div>
                           </div> 
                       </div> 
-                    <div class="col-50"><div class="card">
+                    <div class="col-100"><div class="card">
                       <div class="card-header"><b>Count Down</b></div>
                       <div class="card-content">
                         <div class="card-content-inner text-center">
@@ -57,7 +57,7 @@
                       </div>
                     </div>
                   </div>
-                    <div class="col-50">
+                    <div class="col-100">
                       <div class="card">
                         <div class="card-header"><b>Total Attendees</b></div>
                         <div class="card-content">

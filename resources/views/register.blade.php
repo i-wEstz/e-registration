@@ -20,7 +20,7 @@
   <div class="page-content">
 		<div class="content-block">
       <div class="row">
-      <div class="col-50"><div class="card">
+      <div class="col-100"><div class="card">
         <div class="card-header"><b>Count Down</b></div>
         <div class="card-content">
           <div class="card-content-inner text-center">
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-      <div class="col-50">
+      <div class="col-100">
         <div class="card">
           <div class="card-header"><b>Total Attendees</b></div>
           <div class="card-content">
@@ -62,7 +62,7 @@
 				<ul>
 					<li>
             <div class="text-center">
-            <h1>กรุณาใส่รหัสพนักงาน/Put your employee number here</h1>
+            <h1>กรุณาใส่รหัสพนักงาน<br>Fill your employee number here</h1>
             </div> 
 						<div class="item-content" style="background:whitesmoke;">
 							<div class="item-media">
@@ -106,8 +106,10 @@
      <!-- <div class="content-block-title"><b>จำนวนผู้ติดตาม/Number of Attendees</b></div> -->
       <div class="list-block" style="background:whitesmoke;">
 		<ul>
+			<!-- Open In Sheet -->
 			<li>
-				<a href="#" class="item-link smart-select" data-open-in="popup" data-searchbar="true">
+				<a href="#" class="item-link smart-select" data-open-in="popover" data-searchbar="false"
+				data-back-on-select="true">
 					<select name="attendees">
 						<option value="0" selected>0</option>
 						<option value="1">1</option>

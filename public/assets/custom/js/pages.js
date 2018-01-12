@@ -721,7 +721,7 @@ myApp.onPageInit('home', function(page) {
 |------------------------------------------------------------------------------
 */
 myApp.onPageInit('login', function(page) {
-
+	/*Modal*/
 		/*Count Down*/
 	var countDownDate = new Date("Feb 11, 2018 00:00:00").getTime();
 	// Get todays date and time
@@ -774,8 +774,18 @@ myApp.onPageInit('login', function(page) {
 			error.appendTo(element.parent().siblings('.input-error'));
 		},
 		submitHandler: function(form) {
-			var queryString = $('#login').serialize(); 
-			console.log(queryString);
+			var queryString = $('#login').serializeArray(); 
+			var json = JSON.parse(JSON.stringify(queryString));
+			var id = json[0]['value'];
+			var url = "/employees/"+id;
+			$.getJSON( url, function( json ) {
+				if(json = "-1"){
+					myApp.alert('ไม่พบข้อมูลพนักงาน / Employee not found.');
+				}
+				else{
+				console.log( "JSON Data: " + json );
+				}
+			   });
 			myApp.addNotification({
         message: 'Welcome',
 				hold: 1500,
@@ -783,9 +793,9 @@ myApp.onPageInit('login', function(page) {
 					text: ''
 				}
 			});
-			mainView.router.load({
+			/*mainView.router.load({
 				url: 'menu'
-			});
+			});*/
 		}
 	});
 
