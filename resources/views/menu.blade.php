@@ -4,29 +4,6 @@
   @include('includes.head')
 </head>
 <body>
-    <script>
-        function CallChart(){
-          var ctx = document.getElementById('myChart').getContext('2d');
-          // For a pie chart
-          var myPieChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                  datasets: [{
-                      data: [{!! $result["registered"] !!}, {!! $result["follower"] !!}],
-                      backgroundColor: [
-                          'green', '#2196f3'
-                      ]
-                  }],
-                  // These labels appear in the legend and in the tooltips when hovering different arcs
-                  labels: [
-                      'Attendees',
-                      'Followers'
-                  ]
-              },
-              options: {},
-          });
-        }
-      </script> 
     <!-- Views -->
     <div class="views">
       <!-- Your main view, should have "view-main" class -->
@@ -56,12 +33,12 @@
                       <div class="col-100">
                           <div class="card">
                               <div class="card-header"><b>Check-ins</b></div>
-                              <div class="card-content">
+                              <div class="card-content" id="checkin-content">
                                 <div class="card-content-inner text-center" style="color:green;">
                       
                                   <i class="material-icons" style="font-size:5em;">beenhere</i>
                                   <p><span data-progress="75" class="progressbar color-green"><span style="transform: translate3d(-25%, 0px, 0px);"></span></span></p>
-                                  <h1 style="margin:0px">2436</h1>
+                                  <h1 style="margin:0px" id="checkedin">2436</h1>
 
                                   <p style="margin:0px">ATTENDEES CHECKED IN</p>
                                 </div>
@@ -84,7 +61,7 @@
                       <div class="card">
                         <div class="card-header"><b>Total Attendees</b></div>
                         <div class="card-content">
-                          <div class="card-content-inner text-center" onload="CallChart()">
+                          <div class="card-content-inner text-center">
                               <canvas id="myChart"></canvas>
                               <!--<i class="material-icons" style="font-size:5em;">accessibility</i>
                               <h1 style="margin:0px">{!! $result["registered"] !!}</h1>
@@ -142,21 +119,23 @@
                               <div class="card-content" style="color:#2196f3;">
                                 <div class="card-content-inner text-center">
                                   <i class="material-icons" style="font-size:5em;">camera_enhance</i>
-                                  <h3 style="margin:0px">บูธเช็คอิน/Booth QR</h3>
+                                  <h3 style="margin:0px">เช็คอิน/Check in</h3>
                                 </div>
                               </div>
                             </div>
                           </a>
                         </div>   
                         <div class="col-100">
+                            <a href="{{ route('form') }}">
                             <div class="card">
                                 <div class="card-content" style="color:#2196f3;">
                                   <div class="card-content-inner text-center">
                                     <i class="material-icons" style="font-size:5em;">comment</i>
-                                    <h3 style="margin:0px">แบบสอบถาม/Survey</h3>
+                                    <h3 style="margin:0px">แบบประเมิณกิจกรรม/Evalution form</h3>
                                   </div>
                                 </div>
                               </div>
+                            </a>
                           </div> 
                 </div> 
               </div>
@@ -166,11 +145,6 @@
       </div>
     </div>
      @include('includes.script')
-     <script>
-        $( document ).ready(function() {
-          CallChart();
-      });
-     </script>
 </body>
 <footer>
 </footer>   

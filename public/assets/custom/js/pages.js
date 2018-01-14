@@ -106,6 +106,36 @@ myApp.onPageInit('home', function(page) {
 |------------------------------------------------------------------------------
 */
 myApp.onPageInit('login', function(page) {
+    /*Get Number of Guest*/
+    if(document.getElementById('myChart')){
+    var url_guest = "/checkinstatus";
+    $.getJSON( url_guest, function(json) {
+        var guest = JSON.parse(JSON.stringify(json));
+        var registered = guest['registered'];
+        var follower = guest['follower'];
+        var ctx = document.getElementById('myChart').getContext('2d');
+          // For a pie chart
+          var myPieChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                  datasets: [{
+                      data: [registered, follower],
+                      backgroundColor: [
+                          'red', '#d6d6c2'
+                      ]
+                  }],
+                  // These labels appear in the legend and in the tooltips when hovering different arcs
+                  labels: [
+                      'Attendees',
+                      'Guests'
+                  ]
+              },
+              options: {},
+          });
+
+      });
+    }
+
 
     /*Modal*/
     /*Count Down*/
@@ -180,7 +210,7 @@ myApp.onPageInit('login', function(page) {
                     var data = JSON.parse(json);
                     var name = data[0]['prefix_th'] + data[0]['firstname_th'] + " " + data[0]['lastname_th'];
                     var name_eng = data[0]['prefix_en'] + data[0]['firstname_en'] + " " + data[0]['lastname_en'];
-                    myApp.confirm('ยินดีต้อนรับ ' + name + ". Welcome " + name_eng + ".\n\n จำนวนผู้ติดตาม/Number of follower: " + follower, '\nเช็คอิน / Check In', function() {
+                    myApp.confirm('ยินดีต้อนรับ ' + name + ". Welcome " + name_eng + ".\n จำนวนผู้ติดตาม/Number of Guest: " + follower, '\nเช็คอิน / Check In', function() {
                         $.ajaxSetup({
                             headers: {
                                 'X-CSRF-TOKEN': token
@@ -190,7 +220,7 @@ myApp.onPageInit('login', function(page) {
                             var ret = JSON.stringify(data);
                             console.log(data);
                             if (data == "1") {
-                                myApp.alert('ขอบคุณที่เช็คอิน / Thank you for checked in', 'เช็คอิน / Check In');
+                                myApp.alert('ขอบคุณที่เช็คอิน / Thank you for checking in', 'เช็คอิน / Check In');
                                 myApp.addNotification({
                                     message: 'Check in successful. Welcome ' + name_eng,
                                     hold: 1500,

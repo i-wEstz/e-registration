@@ -44,7 +44,7 @@
 					<li>
 							<div class="content-block">			
             <div class="text-center">
-            <h1>กรุณาใส่รหัสพนักงาน<br>Fill your employee number here</h1>
+            <h1>กรุณาใส่รหัสพนักงาน<br>Fill in your employee number here</h1>
 			</div> 
 		</div>
 						<div class="item-content" style="background:whitesmoke;">
@@ -94,8 +94,8 @@
 			<li>
 				<a href="#" class="item-link smart-select smart-select-init" data-open-in="popover" data-searchbar="false"
 				data-back-on-select="true">
-					<select name="attendees">
-						<option value="0" selected>0</option>
+					<select name="attendees" required>
+						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -105,7 +105,7 @@
 					</select>
 					<div class="item-content">
 						<div class="item-inner">
-							<div class="item-title">จำนวนผู้ติดตาม/Number of Attendees</div>
+							<div class="item-title">จำนวนผู้ติดตาม/Number of Guest</div>
 						</div>
 					</div>
 				</a>

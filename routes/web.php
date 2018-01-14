@@ -29,6 +29,10 @@ Route::get('agenda',function () {
     return view('agenda');
 })->name('agenda');
 
+Route::get('form',function () {
+    return view('form');
+})->name('form');
+
 //Route::get('register',function () {
 //    return view('register');
 //})->name('register');
