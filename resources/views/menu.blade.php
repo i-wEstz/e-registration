@@ -37,9 +37,26 @@
                                 <div class="card-content-inner text-center" style="color:green;">
                       
                                   <i class="material-icons" style="font-size:5em;">beenhere</i>
+    
+                                  @if($result["checkinemp"] === 0)
+                                  <p><span data-progress="0" class="progressbar color-green"><span style="transform: translate3d(-100%, 0px, 0px);"></span></span></p>
+                                  <h1 style="margin:0px" id="checkedin">{!! $result["checkinemp"] !!}</h1>
+                                  @elseif ($result["checkinemp"] < 1058)
+                                  <p><span data-progress="15" class="progressbar color-green"><span style="transform: translate3d(-85%, 0px, 0px);"></span></span></p>
+                                  <h1 style="margin:0px" id="checkedin">{!! $result["checkinemp"] !!}</h1>
+                                  @elseif ($result["checkinemp"] > 1058 && $result["checkinemp"] < 2116)
+                                  <p><span data-progress="50" class="progressbar color-green"><span style="transform: translate3d(-50%, 0px, 0px);"></span></span></p>
+                                  <h1 style="margin:0px" id="checkedin">{!! $result["checkinemp"] !!}</h1>
+                                  @elseif ($result["checkinemp"] > 2116 && $result["checkinemp"] < 3174)
                                   <p><span data-progress="75" class="progressbar color-green"><span style="transform: translate3d(-25%, 0px, 0px);"></span></span></p>
-                                  <h1 style="margin:0px" id="checkedin">2436</h1>
-
+                                  <h1 style="margin:0px" id="checkedin">{!! $result["checkinemp"] !!}</h1>
+                                  @elseif ($result["checkinemp"] > 3174)
+                                  <p><span data-progress="85" class="progressbar color-green"><span style="transform: translate3d(-15%, 0px, 0px);"></span></span></p>
+                                  <h1 style="margin:0px" id="checkedin">{!! $result["checkinemp"] !!}</h1>
+                                  @elseif ($result["checkinemp"] > 4000)
+                                  <p><span data-progress="95" class="progressbar color-green"><span style="transform: translate3d(-5%, 0px, 0px);"></span></span></p>
+                                  <h1 style="margin:0px" id="checkedin">{!! $result["checkinemp"] !!}</h1>
+                                  @endif
                                   <p style="margin:0px">ATTENDEES CHECKED IN</p>
                                 </div>
                               </div>
