@@ -133,4 +133,22 @@ class MainController extends Controller
         return DB::table("Employees")->select("*")->get();
 
     }
+
+    public function getCheckin(){
+
+        $empcount =  DB::table('CheckIn')->count();
+
+        $followercount = DB::table('CheckIn')->sum('follower');
+
+        $result = $this->getAttendees();
+
+        $result['checkinemp'] = $empcount;
+
+        $result['checkinsummary'] = $empcount + $followercount;
+
+
+
+        return $result;
+
+    }
 }

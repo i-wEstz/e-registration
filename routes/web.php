@@ -23,16 +23,17 @@ Route::get('index',function () {
 
 Route::get('home',function () {
     return view('home');
-})->name('home');;
+})->name('home');
+
+Route::get('agenda',function () {
+    return view('agenda');
+})->name('agenda');
 
 //Route::get('register',function () {
 //    return view('register');
 //})->name('register');
 //
 Route::get('register',"MainController@getRegisterPage")->name('register');
-
-
-Route::get('9DE4A97425678C5B1288AA70C1669A64',"MainController@getRegisterPage")->name('register');
 
 //Route::get('menu',function () {
 //    return view('menu');
@@ -50,7 +51,7 @@ Route::get('checkin',function () {
     })->name('checkin');
 
 
-
+Route::get('9DE4A97425678C5B1288AA70C1669A64',"MainController@getRegisterPage")->name('register');
 Route::get('attendee',"MainController@getAttendees");
 
 Route::get('employees',"MainController@getEmployees");
@@ -83,13 +84,7 @@ Route::get('setDB',function(){
 
 });
 
-Route::get('test',function(){
-
-   return "
-<script>window.location.href = 'line://nv/addFriends'; </script>
-
-<a href='line://nv/addFriends'>test</a>";
-});
+Route::get('checkinstatus','MainController@getCheckin');
 
 
 
