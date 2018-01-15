@@ -29,6 +29,10 @@ Route::get('agenda',function () {
     return view('agenda');
 })->name('agenda');
 
+Route::get('form',function () {
+    return view('form');
+})->name('form');
+
 //Route::get('register',function () {
 //    return view('register');
 //})->name('register');
@@ -51,7 +55,12 @@ Route::get('checkin',function () {
     })->name('checkin');
 
 
-Route::get('9DE4A97425678C5B1288AA70C1669A64',"MainController@getRegisterPage")->name('register');
+//Route::get('9DE4A97425678C5B1288AA70C1669A64',"MainController@getRegisterPage")->name('register');
+Route::get('9DE4A97425678C5B1288AA70C1669A64',function(){
+
+    return "";
+
+})->name('register');
 Route::get('attendee',"MainController@getAttendees");
 
 Route::get('employees',"MainController@getEmployees");
@@ -61,18 +70,27 @@ Route::post('employees/{empid}/register',"MainController@registerEmployee");
 
 Route::get('setDB',function(){
 
-    $employees = DB::table("Employees")->select("*")->get();
+    $employees = DB::table("Survey")->select("*")->get();
 
-    $test[] = $employees->each( function ($item,$key){
 
-        if($key % 3 == 0 ){
 
-            $empno = $item->empno;
+//    DB::table('Employees')
+////                ->where('empno', $empno)
+//        ->update(['registedstatus' => 0 ,'follower'=> 0 ]);
+
+    $employees->each( function ($item,$key){
+
+
+
+            $empno = $item->EmpID;
+            $follower = $item->Follower;
 
             DB::table('Employees')
                 ->where('empno', $empno)
-                ->update(['registedstatus' => 1 ,'follower'=> rand(0,4) ]);
-        }
+                ->update(['registedstatus' => 1 ,'follower'=> $follower ]);
+
+
+
 
 
 

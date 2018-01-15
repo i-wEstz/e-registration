@@ -14,7 +14,7 @@ class MainController extends Controller
     {
 
 
-        $result = $this->getAttendees();
+        $result = $this->getCheckin();
 
         return view('register', ["result" => $result]);
     }
@@ -42,7 +42,9 @@ class MainController extends Controller
     {
 
 
-        $result = $this->getAttendees();
+        $result = $this->getCheckin();
+
+//        dd($result);
 
         return view('menu', ["result" => $result]);
     }
