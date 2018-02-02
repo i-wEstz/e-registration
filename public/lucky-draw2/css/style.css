@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'thaisans_neuebold';
+    src: url('font/thaisansneue-bold-webfont.woff2') format('woff2'),
+         url('font/thaisansneue-bold-webfont.woff') format('woff'),
+         url('font/thaisansneue-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'thaisans_neueregular';
+    src: url('font/thaisansneue-regular-webfont.woff2') format('woff2'),
+         url('font/thaisansneue-regular-webfont.woff') format('woff'),
+         url('font/thaisansneue-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.header{
+    font-family: 'thaisans_neuebold';
+    color:white;    
+    font-size:3em;
+}
+body{
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    font-family: 'thaisans_neueregular';
+}
+.spot{
+    background: white;
+    height: 2em;
+    font-size:6em;
+    padding-top: 0.17em;
+    padding-right: 0.9em;
+    padding-left: 0.6em;
+}
+.slot{
+    padding-top: 3vh;
+}
+
+h1{
+    font-family: 'thaisans_neueregular';
+}
+.name{
+    font-size: 5em;
+    padding-top: 13px;
+}
+
+#machine1,#machine2,#machine3,#machine4,#machine5{
+    height: 12em;
+}

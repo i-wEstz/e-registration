@@ -27,7 +27,7 @@
 				
 					<!-- Begin: Page Content -->
 				  <div class="page-content" style="background:white;">
-						<iframe src="http://docs.google.com/gview?url=http://188.166.181.226/sample.pdf&embedded=true" 
+						<iframe src="http://docs.google.com/gview?url=http://188.166.181.226/agenda.pdf&embedded=true" 
 						style="width:100%; height:100%;" frameborder="0"></iframe>
 					</div>
 					<!-- End: Page Content -->

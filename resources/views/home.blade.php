@@ -51,8 +51,9 @@
                   </div>
                   <div class="col-100" style="padding-bottom: 10px;">
 
-                      <a href="{{ route('menu') }}" class="link external button button-big button-block 
-                      button-fill button-raised button-round button-linkedin text-center" 
+{{--                      <a href="{{ route('menu') }}" class="link external button button-big button-block --}}
+                      <a href="menu" class="link external button button-big button-block
+                      button-fill button-raised button-round button-linkedin text-center"
                     role="button" style="height: 6em;" >
                     <span style="font-size: xx-large;line-height: 2.5em;"><i class="fa fa-bars" style="padding-right: 10px;">
                         </i>เมนู / Menu</span></a>

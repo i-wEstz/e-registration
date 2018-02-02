@@ -25,7 +25,7 @@
 								<i class="icon icon-back"></i>
 							</a>
 						</div>-->
-						<div class="center">เช็คอิน / Check In</div>
+						<div class="center">ลงทะเบียน / Register	</div>
 					</div>
 				</div>
 				<!-- End: Navbar -->
@@ -105,7 +105,7 @@
 					</select>
 					<div class="item-content">
 						<div class="item-inner">
-							<div class="item-title">จำนวนผู้ติดตาม/Number of Guest</div>
+							<i class="material-icons" style="font-size:2.5em;line-height:1.2;">loyalty</i><div class="item-title">จำนวนผู้ติดตาม/Number of Guest</div>
 						</div>
 					</div>
 				</a>
@@ -115,7 +115,7 @@
 			<div class="content-block" style="margin-top:1em;margin-bottom:1em;">
 					<meta name="csrf-token" content="{{ csrf_token() }}">
         <button 
-        type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">เช็คอิน/Check In</button>
+        type="submit" class="button button-big button-block button-fill link external" style="font-size:2em;">ลงทะเบียน/Register</button>
 			</div>
 		</form>  
 	   
